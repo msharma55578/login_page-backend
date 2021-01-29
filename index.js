@@ -28,7 +28,7 @@ app.post("/add", (req, res) => {
   let color = req.body.color;
   let password = req.body.password;
 
-  var sql = "INSERT INTO login (name,email,color,password) VALUES (?, ?, ?, ?)";
+  var sql = "INSERT INTO login (name,email,color,password) VALUES (?, ?, ?, ?)"; 
 
   con.query(sql, [Name, email, color, password], function (err, result) {
     if (err) throw err;
@@ -93,3 +93,4 @@ app.get("/fetch", (req, res) => {
 app.listen(8080, () => {
   console.log(`Example app listening at http://localhost:8080`);
 });
+
